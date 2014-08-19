@@ -166,7 +166,7 @@ class PermissionsProvider extends AbstractProvider
                 $this->processProvider->executeSudoCommand('dscl . delete /Users/' . $userName);
                 $this->processProvider->executeSudoCommand('dscl . delete /Groups/' . $groupName);
             } else {
-                $this->processProvider->executeSudoCommand('userdel ' . $userName);
+                $this->processProvider->executeSudoCommand('userdel -f ' . $userName);
             }
         }
     }
